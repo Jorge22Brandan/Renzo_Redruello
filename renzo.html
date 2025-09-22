@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>APRENDER CIENCIAS CON ENERGÍA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2e8b57;
+    }
+    .seccion {
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fffacd;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+    .actividad {
+      background-color: #e6ffe6;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    a {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #add8e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #87cefa;
+    }
+    input {
+      margin: 5px;
+      padding: 8px;
+      font-size: 16px;
+      text-transform: uppercase;
+      width: 80%;
+      max-width: 400px;
+    }
+  </style>
+  <script>
+    function guardarRespuesta(id) {
+      const valor = document.getElementById(id).value;
+      localStorage.setItem(id, valor);
+      alert("RESPUESTA GUARDADA");
+    }
+
+    function verRespuesta(id) {
+      const valor = localStorage.getItem(id);
+      if (valor) {
+        alert("TU RESPUESTA FUE: " + valor);
+      } else {
+        alert("NO HAY RESPUESTA GUARDADA");
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h1>APRENDER CIENCIAS CON ENERGÍA</h1>
+
+  <div class="seccion">
+    <h2>¿QUÉ ES LA ENERGÍA?</h2>
+    <p>LA ENERGÍA ES LO QUE HACE QUE LAS COSAS SE MUEVAN, FUNCIONEN O CAMBIEN.</p>
+    <p>SIN ENERGÍA NO PODRÍAMOS CAMINAR, ENCENDER LA LUZ NI ESCUCHAR MÚSICA.</p>
+    <a href="https://www.youtube.com/watch?v=NAPAMIpGB-s" target="_blank">VER VIDEO: ¿QUÉ ES LA ENERGÍA?</a>
+  </div>
+
+  <div class="seccion">
+    <h2>FORMAS DE ENERGÍA</h2>
+    <p>ENERGÍA LUMINOSA: LA LUZ DEL SOL O DE UNA LÁMPARA.</p>
+    <p>ENERGÍA TÉRMICA: EL CALOR DE UNA ESTUFA O DEL CUERPO.</p>
+    <p>ENERGÍA SONORA: EL SONIDO DE UNA GUITARRA O UNA VOZ.</p>
+    <a href="https://www.youtube.com/watch?v=ZJ9WZb9pJzE" target="_blank">VER VIDEO: FORMAS DE ENERGÍA</a>
+
+    <div class="actividad">
+      <h3>ACTIVIDAD</h3>
+      <p>COMPLETÁ LAS FRASES:</p>
+
+      <p>LA ENERGÍA QUE NOS PERMITE VER ES:</p>
+      <input type="text" id="respuesta1">
+      <br>
+      <button onclick="guardarRespuesta('respuesta1')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta1')">VER RESPUESTA GUARDADA</button>
+
+      <p>LA ENERGÍA QUE SENTIMOS CUANDO HACE CALOR ES:</p>
+      <input type="text" id="respuesta2">
+      <br>
+      <button onclick="guardarRespuesta('respuesta2')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta2')">VER RESPUESTA GUARDADA</button>
+
+      <p>LA ENERGÍA QUE ESCUCHAMOS ES:</p>
+      <input type="text" id="respuesta3">
+      <br>
+      <button onclick="guardarRespuesta('respuesta3')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta3')">VER RESPUESTA GUARDADA</button>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <h2>ENERGÍA EN LA VIDA COTIDIANA</h2>
+    <p>USAMOS ENERGÍA TODOS LOS DÍAS: CUANDO ENCENDEMOS LA RADIO, COCINAMOS, ANDAMOS EN BICICLETA.</p>
+
+    <div class="actividad">
+      <h3>ACTIVIDAD</h3>
+      <p>ESCRIBÍ UNA COSA QUE HACÉS TODOS LOS DÍAS Y QUE USA ENERGÍA:</p>
+      <input type="text" id="respuesta4">
+      <br>
+      <button onclick="guardarRespuesta('respuesta4')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta4')">VER RESPUESTA GUARDADA</button>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <h2>LA TABLA PERIÓDICA Y LOS ELEMENTOS QUÍMICOS</h2>
+    <p>LA TABLA PERIÓDICA ES UNA GRAN LISTA DE ELEMENTOS.</p>
+    <p>CADA ELEMENTO ES UNA SUSTANCIA QUE FORMA TODO LO QUE NOS RODEA.</p>
+    <p>EJEMPLOS: OXÍGENO PARA RESPIRAR, HIERRO EN UNA BICICLETA, CARBONO EN UN LÁPIZ.</p>
+    <a href="https://www.youtube.com/watch?v=60go-4haeXw" target="_blank">VER VIDEO: ¿QUÉ NECESITO SABER SOBRE LA TABLA PERIÓDICA?</a>
+
+    <div class="actividad">
+      <h3>ACTIVIDAD</h3>
+      <p>RELACIONÁ EL ELEMENTO CON SU USO:</p>
+
+      <p>Fe →</p>
+      <input type="text" id="respuesta5" placeholder="¿PARA QUÉ SE USA?">
+      <br>
+      <button onclick="guardarRespuesta('respuesta5')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta5')">VER RESPUESTA GUARDADA</button>
+
+      <p>O →</p>
+      <input type="text" id="respuesta6" placeholder="¿DÓNDE ESTÁ?">
+      <br>
+      <button onclick="guardarRespuesta('respuesta6')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta6')">VER RESPUESTA GUARDADA</button>
+
+      <p>Na →</p>
+      <input type="text" id="respuesta7" placeholder="¿EN QUÉ COMIDA ESTÁ?">
+      <br>
+      <button onclick="guardarRespuesta('respuesta7')">GUARDAR RESPUESTA</button>
+      <button onclick="verRespuesta('respuesta7')">VER RESPUESTA GUARDADA</button>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
